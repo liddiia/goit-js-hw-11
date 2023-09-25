@@ -79,7 +79,7 @@ function onClickLoadMore() {
                 window.removeEventListener('scroll', showLoadMorePage);
             };
             lightbox.refresh();
-            // scrollPage();
+           
         })
         .catch(onFetchError);
 };
@@ -87,15 +87,6 @@ function onClickLoadMore() {
 function onFetchError() {
     Notify.failure('Oops! Something went wrong! Try reloading the page or make another choice!', paramsForNotify);
 };
-
-// function scrollPage() {
-//     const { height: cardHeight } = gallery.firstElementChild.getBoundingClientRect();
-
-//     window.scrollBy({
-//         top: cardHeight * 2,
-//         behavior: "smooth",
-//     });
-// };
 
 function showLoadMorePage() {
     if (checkIfEndOfPage()) {
