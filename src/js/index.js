@@ -5,12 +5,12 @@ import { refs } from './refs';
 import { lightbox } from './lightbox';
 
 const { searchForm, gallery, btnLoadMore } = refs;
-
+//const { searchForm, gallery } = refs;
 const paramsForNotify = {
-    position: 'center-center',
-    timeout: 4000,
-    width: '400px',
-    fontSize: '24px'
+    position: 'center-top',
+    timeout: 3000,
+    width: '450px',
+    fontSize: '20px'
 };
 
 const perPage = 40;
@@ -52,7 +52,7 @@ function onSubmitForm(event) {
 
             };
             if (data.totalHits > perPage) {
-                btnLoadMore.classList.remove('is-hidden');
+               // btnLoadMore.classList.remove('is-hidden');
                 window.addEventListener('scroll', showLoadMorePage);
             };
             // scrollPage();
